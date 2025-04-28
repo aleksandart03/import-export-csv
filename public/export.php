@@ -5,8 +5,8 @@ require_once '../core/Database.php';
 $db = new Database();
 $conn = $db->getConnection();
 
-$filename = "products_export.csv";
-
+$today = date('Y-m-d');
+$filename = "products_export_" . $today . ".csv";
 
 header('Content-Type: text/csv');
 header('Content-Disposition: attachment; filename="' . $filename . '"');
